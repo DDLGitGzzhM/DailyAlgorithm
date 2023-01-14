@@ -1,0 +1,66 @@
+// Problem: U69096 前缀和的逆
+// Contest: Luogu
+// URL: https://www.luogu.com.cn/problem/U69096
+// Memory Limit: 1000 MB
+// Time Limit: 500000 ms
+// 
+// Powered by CP Editor (https://cpeditor.org)
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define IOS  ios::sync_with_stdio(false);
+#define CIT  cin.tie(0);
+#define COT  cout.tie(0);
+
+#define ll long long
+#define x first
+#define y second
+#define pb push_back
+#define endl '\n'
+#define all(a) std::begin(a), std::end(a)
+#define Fup(i,a,b) for(int i=a;i<=b;i++)
+#define Fde(i,a,b) for(int i=a;i>=b;i--)
+
+template <typename _Tp, typename _Fp, typename _Compare = std::less<void>>
+bool chmax(_Tp &a, const _Fp &b, _Compare __comp = _Compare()) { return __comp(a, b) ? a = b, true : false; }
+template <typename _Tp, typename _Fp, typename _Compare = std::less<void>>
+bool chmin(_Tp &a, const _Fp &b, _Compare __comp = _Compare()) { return __comp(b, a) ? a = b, true : false; }
+
+
+
+#define NO cout<<"NO"<<endl;
+#define YES cout<<"YES"<<endl;
+
+
+const int N = 2e5+10,INF = 0x3f3f3f3f;
+const double eps = 1e-5;
+
+
+struct node{
+    int to,val;
+};
+
+
+int n;
+ll s[N];
+ll d[N];
+
+void solve(){
+	cin>>n ;
+	Fup(i,1,n){
+		cin>>s[i];
+		// s[i] = s[i] - s[i-1];
+		d[i] = s[i] - s[i-1];
+		cout<<d[i]<<" ";
+	}
+	
+	
+
+}
+
+int main(){
+	//int t;cin>>t;while(t--)
+    solve();
+    return 0 ;
+}
