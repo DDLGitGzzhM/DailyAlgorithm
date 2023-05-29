@@ -3,6 +3,3 @@ abcbbbc
 
 --newbr
 bbbb
-
----test
-conflict
