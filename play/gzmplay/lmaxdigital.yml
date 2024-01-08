@@ -1,0 +1,34 @@
+# Updated at: 2024-01-08 18:45:54
+snippets:
+  - name: lmax-info
+    code: >
+      {
+         "endpoint": "/v1/account/wallets",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: lmax-bill
+    code: >
+      {
+         "endpoint": "/v1/account/account-transactions",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: lmax-order
+    code: >
+      {
+         "endpoint": "/v1/account/trades",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: lmax-trans
+    code: >
+      {
+         "endpoint": "/v1/account/trades",
+         "method": "get",
+         "data": {
+         }
+      }

@@ -1,0 +1,26 @@
+# Updated at: 2024-01-08 18:45:30
+snippets:
+  - name: coinbaseprime-trans
+    code: >
+      {
+         "endpoint": "/v1/portfolios/{{portfolios}}/orders",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: coinbaseprime-order
+    code: >
+      {
+         "endpoint": "/v1/portfolios/{{portfolioID}}/orders/{{oids}}",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: coinbaseprime-info
+    code: >
+      {
+         "endpoint": "/v1/portfolios/{{portfolioID}}/balances",
+         "method": "get",
+         "data": {
+         }
+       }

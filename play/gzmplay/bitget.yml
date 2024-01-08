@@ -1,0 +1,191 @@
+# Updated at: 2024-01-08 18:45:57
+snippets:
+  - name: bitget-info
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/spot/v1/account/assets",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: bitget-order
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/spot/v1/trade/orderInfo",
+         "method": "post",
+         "data": {
+           "clientOrderID":"19cad31d-7345-4675-8202-891f6a3d9b7b",
+           "orderId":"846869996777148416",
+           "symbol":"ETHUSDT_SPBL"
+         }
+       }
+  - name: bitget-bill
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/spot/v1/account/bills",
+         "method": "post",
+         "data": {
+         }
+       }
+  - name: bitget-trans
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/spot/v1/trade/fills",
+         "method": "post",
+         "data": {
+            "symbol":"USDCUSDT_SPBL"
+         }
+       }
+  - name: bitgetc-info
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/account/accounts",
+         "method": "get",
+         "data": {
+          "productType":"dmcbl"
+         }
+       }
+  - name: bitgetc-positions
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/position/allPosition",
+         "method": "get",
+         "data": {
+           "productType":"dmcbl"
+         }
+       }
+  - name: bitgetc-order
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/order/detail",
+         "method": "get",
+         "data": {
+           "orderId":"970521520562143236",
+           "symbol":"BTCPERP_CMCBL"
+         }
+       }
+  - name: bitgetc-trans
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/order/fills",
+         "method": "get",
+         "data": {
+           "endTime":"1667121960000",
+           "startTime":"1666855560000",
+           "symbol":"BTCPERP_CMCBL"
+         }
+       }
+  - name: bitgetc-bill
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/account/accountBusinessBill",
+         "method": "get",
+         "data": {
+           "productType":"dmcbl"
+           "endTime":"1667121960000",
+           "startTime":"1666855560000"
+         }
+       }
+  - name: bitgetswap-info
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/account/accounts",
+         "method": "get",
+         "data": {
+           "productType":"dmcbl"
+         }
+       }
+  - name: bitgetswap-positions
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/position/allPosition",
+         "method": "get",
+         "data": {
+           "productType":"dmcbl"
+         }
+       }
+  - name: bitgetswap-order
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/order/detail",
+         "method": "get",
+         "data": {
+           "symbol":"btc.usdt"
+         }
+       }
+  - name: bitgetswap-trans
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/order/fills",
+         "method": "get",
+         "data": {
+           "symbol":"btc.usdt"
+         }
+       }
+  - name: bitgetswap-bill
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/account/accountBusinessBill",
+         "method": "get",
+         "data": {
+           "productType":"dmcbl",
+           "startTime": "1667097461000",
+           "endTime":   "1667144261000"
+         }
+       }
+  - name: bitgetuswap-info
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/account/accounts",
+         "method": "get",
+         "data": {
+          "productType":"dmcbl"
+         }
+       }
+  - name: bitgetuswap-bill
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/account/accountBusinessBill",
+         "method": "get",
+         "data": {
+           "productType":"dmcbl",
+           "startTime": "1682069340632",
+           "endTime":   "1682071388000"
+         }
+       }
+  - name: bitgetuswap-order
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/order/detail",
+         "method": "get",
+         "data": {
+           "symbol":"btc.usdt"
+         }
+       }
+  - name: bitgetuswap-trans
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/mix/v1/order/fills",
+         "method": "get",
+         "data": {
+          "symbol":"btc.usdt"
+         }
+       }
