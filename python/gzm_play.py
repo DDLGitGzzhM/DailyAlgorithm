@@ -54,13 +54,6 @@ def update_yml(exchange):
     with open(f'play/gzmplay/{exchange}.yml', 'w') as f:
         yaml.dump(res, f)
 
-    china_timezone = datetime.timezone(datetime.timedelta(hours=8))
-    timestamp = datetime.datetime.now(china_timezone).strftime("%Y-%m-%d %H:%M:%S")  # 获取当前时间戳
-    comment = f"# Updated at: {timestamp}"  # 创建注释行
-    with open(f'play/gzmplay/{exchange}.yml', 'w') as f:
-        f.write(comment + '\n')  # 写入注释行
-        yaml.dump(res, f)
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='manual to this script')
     parser.add_argument('--token', type=str, default='', help='token', required=True)
