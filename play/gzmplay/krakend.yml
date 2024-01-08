@@ -1,0 +1,74 @@
+# Updated at: 2024-01-08 18:45:38
+snippets:
+  - name: krakend-info
+    code: >
+      {
+         "endpoint": "/derivatives/api/v3/accounts",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: krakend-positions
+    code: >
+      {
+         "endpoint": "/derivatives/api/v3/openpositions",
+         "method": "get",
+         "data": {
+        }
+      }
+  - name: krakenduni-info
+    code: >
+      {
+         "endpoint": "/derivatives/api/v3/accounts",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: krakendwallet-positions
+    code: >
+      {
+         "endpoint": "/derivatives/api/v3/openpositions",
+         "method": "get",
+         "data": {
+          }
+      }
+  - name: krakendwallet-info
+    code: >
+      {
+         "endpoint": "/derivatives/api/v3/accounts",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: krakend-order
+    code: >
+      {
+         "endpoint": "/derivatives/api/v3/openorders",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: krakend-trans
+    code: >
+      {
+         "endpoint": "/api/history/v2/executions",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: krakenduni-trans
+    code: >
+      {
+         "endpoint": "/api/history/v2/executions",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: krakenduni-bill
+    code: >
+      {
+         "endpoint": "/api/history/v2/account-log",
+         "method": "get",
+         "data": {
+         }
+      }

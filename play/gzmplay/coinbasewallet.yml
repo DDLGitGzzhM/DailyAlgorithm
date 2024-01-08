@@ -1,0 +1,10 @@
+# Updated at: 2024-01-08 18:45:32
+snippets:
+  - name: coinbase-info
+    code: >
+      {
+         "endpoint": "/v2/accounts",
+         "method": "get",
+         "data": {
+         }
+       }

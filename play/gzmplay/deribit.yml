@@ -1,0 +1,42 @@
+# Updated at: 2024-01-08 18:45:37
+snippets:
+  - name: deribit-positions
+    code: >
+      {
+         "endpoint": "/api/v2/private/get_positions",
+         "method": "get",
+         "data": {
+           "currency": "BTC"
+         }
+       }
+  - name: deribit-bill
+    code: >
+      {
+         "endpoint": "/api/v2/private/get_transaction_log",
+         "method": "get",
+         "data": {
+           "currency": "USDC",
+           "end_timestamp":"1681401600000",
+           "start_timestamp":"1678723200000
+         }
+       }
+  - name: deribit-order
+    code: >
+      {
+         "endpoint": "/api/v2/private/get_order_state",
+         "method": "get",
+         "data": {
+          "order_id":"eth.usd"
+         }
+       }
+  - name: deribit-trans
+    code: >
+      {
+         "endpoint": "/api/v2/private/get_user_trades_by_currency",
+         "method": "get",
+         "data": {
+           "count":"2",
+           "currency":"USDC",
+           "sorting":"desc"
+         }
+       }

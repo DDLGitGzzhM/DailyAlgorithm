@@ -1,0 +1,119 @@
+# Updated at: 2024-01-08 18:45:41
+snippets:
+  - name: coinex-info
+    code: >
+      {
+         "endpoint": "/v1/balance/info",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: coinex-bill
+    code: >
+      {
+         "endpoint": "/v1/account/balance/history",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: coinex-order
+    code: >
+      {
+         "endpoint": "/v1/order/finished",
+         "method": "get",
+         "data": {
+           "page":"1",
+           "limit":"100"
+         }
+       }
+  - name: coinex-trans
+    code: >
+      {
+         "endpoint": "/v1/order/user/deals",
+         "method": "get",
+         "data": {
+          "page":"1",
+          "limit":"100"
+         }
+       }
+  - name: coinexam-info
+    code: >
+      {
+         "endpoint": "/v1/account/investment/balance",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: coinexamm-info
+    code: >
+      {
+         "endpoint": "/v1/account/amm/balance",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: coinexm-info
+    code: >
+      {
+         "endpoint": "/v1/margin/account",
+         "method": "get",
+         "data": {
+          "market":"BTCUSDT"
+         }
+       }
+  - name: coinexm-trans
+    code: >
+      {
+         "endpoint": "/v1/order/user/deals",
+         "method": "get",
+         "data": {
+          "page":"1",
+          "limit":"100"
+         }
+       }
+  - name: coinexm-bill
+    code: >
+      {
+         "endpoint": "/v1/account/balance/history",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: coinexswap-info
+    code: >
+      {
+         "endpoint": "/perpetual/v1/asset/query",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: coinexswap-positions
+    code: >
+      {
+         "endpoint": "/perpetual/v1/position/pending",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: coinexswap-trans
+    code: >
+      {
+         "endpoint": "/perpetual/v1/market/user_deals",
+         "method": "get",
+         "data": {
+           "limit":"100",
+           "side":"0",
+           "offset":"0"
+         }
+       }
+  - name: coinexswap-order
+    code: >
+      {
+         "endpoint": "/perpetual/v1/order/finished",
+         "method": "get",
+         "data": {
+           "limit":"100",
+           "side":"0",
+           "offset":"0"
+         }
+       }

@@ -1,0 +1,38 @@
+# Updated at: 2024-01-08 18:45:47
+snippets:
+  - name: bitmex-info
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/v1/user/margin",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: bitmex-bill
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/v1/user/walletHistory",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: bitmex-order
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/v1/order",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: bitmex-trans
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/v1/execution/tradeHistory",
+         "method": "get",
+         "data": {
+         }
+       }

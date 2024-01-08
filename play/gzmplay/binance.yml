@@ -1,0 +1,257 @@
+# Updated at: 2024-01-08 18:45:56
+snippets:
+  - name: bnwallet-info
+    code: >
+      {
+         "host": "sapi",
+         "endpoint": "/sapi/v1/asset/get-funding-asset",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: binance-info
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/v3/account",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: binance-fee
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/sapi/v1/asset/tradeFee",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: binancem-info
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/sapi/v1/margin/account",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: binancem-info
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/sapi/v1/margin/isolated/account",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: binancef-info
+    code: >
+      {
+         "host": "fapi",
+         "endpoint": "/fapi/v2/positionRisk",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: binancef-order-asyn-query
+    code: >
+      {
+        "host": "fapi",
+        "endpoint": "/fapi/v1/order/asyn",
+        "method": "get",
+        "data": {
+          "startTime": "1688818328000",
+          "endTime": "1690200728000"
+        }
+      }
+  - name: binancef-order-asyn-download
+    code: >
+      {
+        "host": "fapi",
+        "endpoint": "/fapi/v1/order/asyn/id",
+        "method": "get",
+        "data": {
+          "downloadId": "735831753251540992"
+        }
+      }
+  - name: binanced-info
+    code: >
+      {
+         "host": "sapi",
+         "endpoint": "/sapi/v1/margin/isolated/account",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: binancelend-info
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/sapi/v1/lending/union/account",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: binancestaking-info
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/sapi/v1/staking/position",
+         "method": "get",
+         "data": {
+            "product" :"L_DEFI"
+         }
+       }
+  - name: bnliquidswap-info
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/sapi/v1/bswap/liquidity",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: binanceop-info
+    code: >
+      {
+         "host": "eapi",
+         "endpoint": "/eapi/v1/position",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: binancem-bill
+    code: >
+      {
+         "host": "sapi",
+         "endpoint": "/sapi/v1/margin/capital-flow",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: binance-order
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/v3/order",
+         "method": "get",
+         "data": {
+           "symbol": "ETHUSDT",
+           "orderId": "8389765610404601621"
+         }
+      }
+  - name: binancem-order
+    code: >
+      {
+         "host": "sapi",
+         "endpoint": "/sapi/v1/margin/order",
+         "method": "get",
+         "data": {
+            "symbol": "ETHUSDT",
+            "orderId": "8389765610404601621"
+         }
+      }
+  - name: binancecm-order
+    code: >
+      {
+         "host": "sapi",
+         "endpoint": "/sapi/v1/margin/order",
+         "method": "get",
+         "data": {
+           "symbol": "ETHUSDT",
+           "orderId": "8389765610404601621"
+         }
+      }
+  - name: binancef-order
+    code: >
+      {
+         "host": "fapi",
+         "endpoint": "/fapi/v1/order",
+         "method": "get",
+         "data": {
+             "symbol": "ETHUSDT",
+             "orderId": "8389765610404601621"
+         }
+      }
+  - name: binanced-order
+    code: >
+      {
+         "host": "dapi",
+         "endpoint": "/dapi/v1/order",
+         "method": "get",
+         "data": {
+            "symbol": "ETHUSDT",
+            "orderId": "8389765610404601621"
+         }
+      }
+  - name: binance-trans
+    code: >
+      {
+         "host": "api",
+         "endpoint": "/api/v3/myTrades",
+         "method": "get",
+         "data": {
+              "symbol": "ETHUSDT"
+         }
+       }
+  - name: binancecm-info
+    code: >
+      {
+         "host": "sapi",
+         "endpoint": "/sapi/v1/margin/capital-flow",
+         "method": "get",
+         "data": {
+           "symbol": "ETHUSDT"
+         }
+       }
+  - name: binancecm-trans
+    code: >
+      {
+         "host": "sapi",
+         "endpoint": "/sapi/v1/margin/myTrades",
+         "method": "get",
+         "data": {
+             "symbol": "ETHUSDT"
+         }
+       }
+  - name: binanced-bill
+    code: >
+      {
+         "host": "dapi",
+         "endpoint": "/dapi/v1/income",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: binanced-trans
+    code: >
+      {
+         "host": "dapi",
+         "endpoint": "/dapi/v1/userTrades",
+         "method": "get",
+         "data": {
+             "symbol": "ETHUSDT"
+         }
+       }
+  - name: binancef-trans
+    code: >
+      {
+         "host": "fapi",
+         "endpoint": "/fapi/v1/userTrades",
+         "method": "get",
+         "data": {
+             "symbol": "ETHUSDT"
+         }
+       }
+  - name: binancem-trans
+    code: >
+      {
+         "host": "sapi",
+         "endpoint": "/sapi/v1/margin/myTrades",
+         "method": "get",
+         "data": {
+             "symbol":"OPUSDT",
+             "isIsolated":"TRUE"
+         }
+       }

@@ -1,0 +1,42 @@
+# Updated at: 2024-01-08 18:45:46
+snippets:
+  - name: kraken-info
+    code: >
+      {
+         "endpoint": "/0/private/Balance",
+         "method": "post",
+         "data": {
+         }
+      }
+  - name: kraken-positions
+    code: >
+      {
+         "endpoint": "/0/private/OpenPositions",
+         "method": "post",
+         "data": {
+          }
+      }
+  - name: kraken-bill
+    code: >
+      {
+         "endpoint": "/0/private/Ledgers",
+         "method": "post",
+         "data": {
+          }
+      }
+  - name: kraken-order
+    code: >
+      {
+         "endpoint": "/0/private/QueryOrders",
+         "method": "post",
+         "data": {
+          }
+      }
+  - name: kraken-trans
+    code: >
+      {
+         "endpoint": "/0/private/TradesHistory",
+         "method": "post",
+         "data": {
+          }
+      }
