@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1fa911-5e6c-469c-b94c-a1694f6285a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/gzm.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/play/gzmplay/abc.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/gzm_play.py" afterDir="false" />
+    <list default="true" id="4d1fa911-5e6c-469c-b94c-a1694f6285a9" name="Changes" comment="for test">
+      <change beforePath="$PROJECT_DIR$/python/gzm_play.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/gzm_play.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +93,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="for test" />
+    <option name="LAST_COMMIT_MESSAGE" value="for test" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
