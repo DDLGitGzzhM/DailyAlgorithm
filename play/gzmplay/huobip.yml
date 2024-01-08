@@ -1,0 +1,292 @@
+# Updated at: 2024-01-08 18:22:11
+snippets:
+  - name: huobip-info
+    code: >
+      {
+         "host": "huobi",
+         "endpoint": "/v1/account/accounts/{{accountID}}/balance",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: huobicm-info
+    code: >
+      {
+         "host": "huobi",
+         "endpoint": "/v1/cross-margin/accounts/balance",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: huobim-info
+    code: >
+      {
+         "host": "huobi",
+         "endpoint": "/v1/margin/accounts/balance",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: huobiuni-info
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v3/unified_account_info",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: huobiuswap-info
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v1/swap_account_info",
+         "method": "post",
+         "data": {
+         }
+  - name: huobicuswap-info
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v1/swap_cross_account_info",
+         "method": "post",
+         "data": {
+         }
+  - name: huobiswap-info
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/swap-api/v1/swap_account_info",
+         "method": "get",
+         "data": {
+         }
+  - name: huobiuf-info
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/api/v1/contract_account_info",
+         "method": "post",
+         "data": {
+         }
+  - name: houbicm-bill
+    code: >
+      {
+         "host": "huobi",
+         "endpoint": "/v1/account/history",
+         "method": "get",
+         "data": {
+           "account-id":"33218230"
+         }
+       }
+  - name: huobicm-trans
+    code: >
+      {
+        "host": "huobi",
+         "endpoint": "/v1/order/matchresults",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: huobicm-order
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/v1/order/orders/{{orderId}}",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: huobicuswap-bill
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v3/swap_financial_record_exact",
+         "method": "get",
+         "data": {
+            "direct" : "prev", 
+            "mar_acct" : "USDT"
+         }
+       }
+  - name: huobicuswap-trans
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v3/swap_cross_matchresults_exact",
+         "method": "get",
+         "data": {
+           "contract":   "btc.usdt",
+           "trade_type": "0",
+           "direct":     "prev"
+         }
+       }
+  - name: huobicuswap-order
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v1/swap_cross_account_info",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: houbif-info
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/api/v1/contract_account_info",
+         "method": "post",
+         "data": {
+         }
+       }
+  - name: huobif-bill
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/api/v3/contract_financial_record_exact",
+         "method": "post",
+         "data": {
+           "direct" : "prev", 
+           "symbol":"btc"
+         }
+       }
+  - name: huobif-trans
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/api/v3/contract_matchresults_exact",
+         "method": "post",
+         "data": {
+           "trade_type": "0",           
+           "symbol":"btc"
+         }
+       }
+  - name: huobif-order
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/api/v1/contract_order_info",
+         "method": "post",
+         "data": {
+            "symbol":"xrp.usd.20220902",
+           "order_id":"1012008741342527488"
+         }
+       }
+  - name: huobim-bill
+    code: >
+      {
+         "host": "huobi",
+         "endpoint": "/v1/account/history",
+         "method": "get",
+         "data": {
+           "account-id":"37105562",
+           "symbol":"btcusdt"
+         }
+       }
+  - name: huobim-trans
+    code: >
+      {
+         "host": "huobi",
+         "endpoint": "/v1/order/matchresults",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: huobim-order
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/v1/order/orders/{{order_id}}",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: huobiuni-bill
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v3/swap_financial_record_exact",
+         "method": "post",
+         "data": {
+          "mar_acct":"usdt",
+          "direct":  "prev"
+         }
+       }
+  - name: huobiuni-cross-trans
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v3/swap_cross_matchresults_exact",
+         "method": "post",
+         "data": {
+            "trade_type": "0",         
+            "contract":   "btc.usdt"
+         }
+       }
+  - name: huobiuni-cross-order
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v3/swap_cross_hisorders_exact",
+         "method": "post",
+         "data": {
+          "trade_type": "0",          
+          "status" : 0,         
+          "type" : 2 ,           
+          "contract" : "TRX-USDT"
+         }
+       }
+  - name: huobiuni-loated-trans
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v3/swap_matchresults_exact",
+         "method": "post",
+         "data": {
+          "trade_type" :"0",          
+          "contract":   "TRX-USDT"
+         }
+       }
+  - name: huobiuni-loated-order
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v3/swap_hisorders_exact",
+         "method": "post",
+         "data": {
+            "type" : 2, 
+            "trade_type" :0 , 
+            "status" : 0 , 
+            "contract" : "TRX-USDT"
+         }
+       }
+  - name: huobiuswap-bill
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v3/swap_financial_record_exact",
+         "method": "post",
+         "data": {
+           "mar_acct":"usdt"
+         }
+       }
+  - name: huobiuswap-order
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v1/swap_order_info",
+         "method": "post",
+         "data": {
+           "contract_code":"BTC-USDT",
+           "order_id":"1234"
+         }
+       }
+  - name: huobiuswap-trans
+    code: >
+      {
+         "host": "hbdm",
+         "endpoint": "/linear-swap-api/v3/swap_matchresults_exact",
+         "method": "post",
+         "data": {
+           "trade_type": "0",    
+           "contract":   "btc.usdt"
+         }
+       }

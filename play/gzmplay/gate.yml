@@ -1,0 +1,203 @@
+# Updated at: 2024-01-08 18:22:35
+snippets:
+  - name: gate-info
+    code: >
+      {
+         "endpoint": "/api/v4/spot/accounts",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gate-order
+    code: >
+      {
+         "endpoint": "/api/v4/spot/open_orders",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gate-trans
+    code: >
+      {
+         "endpoint": "/api/v4/spot/my_trades",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gatebswap-info
+    code: >
+      {
+         "endpoint": "/api/v4/futures/btc/accounts",
+         "host": "https://api.gateio.ws"
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gatebswap-positions
+    code: >
+      {
+         "endpoint": "/api/v4/futures/btc/positions",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gatebswap-order
+    code: >
+      {
+         "endpoint": "/api/v4/futures/btc/orders",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+           "status":"finished"
+         }
+       }
+  - name: gatebswap-trans
+    code: >
+      {
+         "endpoint": "/api/v4/futures/btc/my_trades",
+         "method": "get",
+         "host": "https://api.gateio.ws",
+         "data": {
+         }
+       }
+  - name: gatef-info
+    code: >
+      {
+         "endpoint": "/api/v4/delivery/usdt/accounts",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gatef-positinos
+    code: >
+      {
+         "endpoint": "/api/v4/delivery/usdt/positions",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gatef-order
+    code: >
+      {
+         "endpoint": "/api/v4/delivery/usdt/orders",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+           "status":"finished"
+         }
+       }
+  - name: gatef-trans
+    code: >
+      {
+         "endpoint": "/api/v4/delivery/usdt/my_trades",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gatelend-info
+    code: >
+      {
+         "endpoint": "/api/v4/margin/funding_accounts",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gatem-info
+    code: >
+      {
+         "endpoint": "/api/v4/margin/accounts",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gatem-order
+    code: >
+      {
+         "endpoint": "/api/v4/spot/open_orders",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gatem-trans
+    code: >
+      {
+         "endpoint": "/api/v4/spot/my_trades",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gateop-info
+    code: >
+      {
+         "endpoint": "/api/v4/options/accounts",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gateop-positions
+    code: >
+      {
+         "endpoint": "/api/v4/options/positions",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gateswap-info
+    code: >
+      {
+         "endpoint": "/api/v4/futures/usdt/accounts",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gateswap-positions
+    code: >
+      {
+         "endpoint": "/api/v4/futures/usdt/positions",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gateswap-order
+    code: >
+      {
+         "endpoint": "/api/v4/futures/usdt/orders",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+           "status":"finished"
+         }
+       }
+  - name: gateswap-trans
+    code: >
+      {
+         "endpoint": "/api/v4/futures/usdt/my_trades",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }
+  - name: gateuni-info
+    code: >
+      {
+         "endpoint": "/api/v4/margin/cross/accounts",
+         "host": "https://api.gateio.ws",
+         "method": "get",
+         "data": {
+         }
+       }

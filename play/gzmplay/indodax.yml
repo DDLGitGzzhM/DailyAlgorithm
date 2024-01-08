@@ -1,0 +1,11 @@
+# Updated at: 2024-01-08 18:22:23
+snippets:
+  - name: indodax-info
+    code: >
+      {
+         "endpoint": "",
+         "method": "post",
+         "data": {
+            "method": "getInfo"
+         }
+       }

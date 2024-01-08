@@ -1,0 +1,162 @@
+# Updated at: 2024-01-08 18:22:26
+snippets:
+  - name: bybit-info
+    code: >
+      {
+         "endpoint": "/v5/account/wallet-balance",
+         "host":"",
+         "method": "get",
+         "data": {
+           "accountType": "CONTRACT"
+          }
+      }
+  - name: bybit-bill
+    code: >
+      {
+         "endpoint": "/v2/private/wallet/fund/records",
+         "host":"",
+         "method": "get",
+         "data": {
+          }
+      }
+  - name: bybit-trans
+    code: >
+      {
+         "endpoint": "/v5/execution/list",
+         "host":"",
+         "method": "get",
+         "data": {
+          "category":"inverse",
+          "execType":"Trade",
+          "exec_type":"Trade",
+          "limit":"20"
+          }
+      }
+  - name: bybitcswap-info
+    code: >
+      {
+         "endpoint": "/contract/v3/private/account/wallet/balance",
+         "method": "get",
+         "host":"",
+         "data": {
+          }
+      }
+  - name: bybitloan-positions
+    code: >
+      {
+         "endpoint": "/v5/ins-loan/loan-order",
+         "method": "get",
+         "host":"",
+         "data": {
+          }
+      }
+  - name: bybitspot-info
+    code: >
+      {
+         "endpoint": "/v5/asset/transfer/query-asset-info",
+         "method": "get",
+         "host":"",
+         "data": {
+          }
+      }
+  - name: bybitspot-trans
+    code: >
+      {
+         "endpoint": "/v5/execution/list",
+         "method": "get",
+         "host":"",
+         "data": {
+          "category":"inverse",
+          "execType":"Trade",
+          "exec_type":"Trade",
+          "limit":"20"
+          }
+      }
+  - name: bybitspot-order
+    code: >
+      {
+         "endpoint": "/v5/order/history",
+         "method": "get",
+         "host":"",
+         "data": {
+          "category":"inverse",
+          "limit":"20"
+          }
+      }
+  - name: bybitu-info
+    code: >
+      {
+         "endpoint": "/v2/private/wallet/balance",
+         "method": "get",
+         "host":"",
+         "data": {
+          }
+      }
+  - name: bybitu-bill
+    code: >
+      {
+         "endpoint": "/v2/private/wallet/fund/records",
+         "method": "get",
+         "host":"",
+         "data": {
+          }
+      }
+  - name: bybitu-order
+    code: >
+      {
+         "endpoint": "/private/linear/order/list",
+         "method": "get",
+         "host":"",
+         "data": {
+            "order_id":"464f995f-5209-42e9-a293-1adba8d69ca0",
+            "symbol":"XRPUSDT"
+          }
+      }
+  - name: bybitu-trans
+    code: >
+      {
+         "endpoint": "/private/linear/trade/execution/history-list",
+         "method": "get",
+         "host":"",
+         "data": {
+           "symbol":"XRPUSDT"
+          }
+      }
+  - name: bybituni-info
+    code: >
+      {
+         "endpoint": "/unified/v3/private/account/wallet/balance",
+         "method": "get",
+         "host":"bybit",
+         "data": {
+          }
+      }
+  - name: bybituni-bill
+    code: >
+      {
+         "endpoint": "/unified/v3/private/account/transaction-log",
+         "method": "get",
+         "host":"bybit",
+         "data": {
+          }
+      }
+  - name: bybituni-order
+    code: >
+      {
+         "endpoint": "/unified/v3/private/order/list",
+         "method": "get",
+         "host":"bybit",
+         "data": {
+          "currency":"USDT",
+          "category":"linear"     
+          }
+      }
+  - name: bybituni-trans
+    code: >
+      {
+         "endpoint": "/unified/v3/private/account/transaction-log",
+         "method": "get",
+         "host":"bybit",
+         "data": {
+          }
+      }

@@ -1,0 +1,42 @@
+# Updated at: 2024-01-08 18:22:21
+snippets:
+  - name: market-currencies
+    code: >
+      {
+        "endpoint": "/v1/markets/currencies",
+        "method": "get",
+        "data": {
+        }
+      }
+  - name: market-securities
+    code: >
+      {
+        "endpoint": "/v1/markets/securities",
+        "method": "get",
+        "data": {
+        }
+      }
+  - name: currencies
+    code: >
+      {
+       "endpoint": "/v1/currencies",
+       "method": "get",
+       "data": {
+       }
+      }
+  - name: securities
+    code: >
+      {
+       "endpoint": "/v1/securities",
+       "method": "get",
+       "data": {
+       }
+      }
+  - name: markets
+    code: >
+      {
+       "endpoint": "/v1/markets",
+       "method": "get",
+       "data": {
+       }
+      }

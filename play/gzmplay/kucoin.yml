@@ -1,0 +1,92 @@
+# Updated at: 2024-01-08 18:22:07
+snippets:
+  - name: kucoin-info
+    code: >
+      {
+         "endpoint": "/api/v1/accounts",
+         "method": "get",
+         "host":"",
+         "data": {
+         }
+      }
+  - name: kucoin-bill
+    code: >
+      {
+         "endpoint": "/api/v1/accounts/ledgers",
+         "method": "get",
+         "host":"",
+         "data": {
+         }
+      }
+  - name: kucoin-trans
+    code: >
+      {
+         "endpoint": "/api/v1/fills",
+         "method": "get",
+         "host":"",
+         "data": {
+         }
+      }
+  - name: kucoincm-info
+    code: >
+      {
+         "endpoint": "/api/v1/margin/account",
+         "method": "get",
+         "host":"",
+         "data": {
+         }
+      }
+  - name: kucoincm-trans
+    code: >
+      {
+         "endpoint": "/api/v1/fills",
+         "method": "get",
+         "host":"",
+         "data": {
+         }
+      }
+  - name: kucoincoinm-info
+    code: >
+      {
+         "endpoint": "/api/v1/account-overview",
+         "method": "get",
+         "host":"kucoincoinm",
+         "data": {
+         }
+      }
+  - name: kucoincoinm-trans
+    code: >
+      {
+         "endpoint": "/api/v1/fills",
+         "method": "get",
+         "host":"kucoincoinm",
+         "data": {
+         }
+      }
+  - name: kucoinm-info
+    code: >
+      {
+         "endpoint": "/api/v1/isolated/accounts",
+         "method": "get",
+         "host":"",
+         "data": {
+         }
+      }
+  - name: kucoinm-trans
+    code: >
+      {
+         "endpoint": "/api/v1/fills",
+         "method": "get",
+         "host":"",
+         "data": {
+         }
+      }
+  - name: kucoinsave-info
+    code: >
+      {
+         "endpoint": "/api/v1/accounts",
+         "method": "get",
+         "host":"",
+         "data": {
+         }
+      }

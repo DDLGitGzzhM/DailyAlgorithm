@@ -1,0 +1,118 @@
+Collecting arrow
+  Downloading arrow-1.3.0-py3-none-any.whl (66 kB)
+Collecting influxdb
+  Downloading influxdb-5.3.1-py2.py3-none-any.whl (77 kB)
+Collecting docopt
+  Downloading docopt-0.6.2.tar.gz (25 kB)
+Collecting rich
+  Downloading rich-13.7.0-py3-none-any.whl (240 kB)
+Collecting langchain
+  Downloading langchain-0.1.0-py3-none-any.whl (797 kB)
+Requirement already satisfied: requests in /usr/lib/python3/dist-packages (2.22.0)
+Requirement already satisfied: pyyaml in /usr/lib/python3/dist-packages (5.3.1)
+Collecting redis
+  Downloading redis-5.0.1-py3-none-any.whl (250 kB)
+Collecting aiohttp
+  Downloading aiohttp-3.9.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+Collecting psutil
+  Downloading psutil-5.9.7-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (285 kB)
+Collecting invoke
+  Downloading invoke-2.2.0-py3-none-any.whl (160 kB)
+Requirement already satisfied: pyjwt in /usr/lib/python3/dist-packages (1.7.1)
+Collecting python-dotenv
+  Downloading python_dotenv-1.0.0-py3-none-any.whl (19 kB)
+Collecting telebot
+  Downloading telebot-0.0.5-py3-none-any.whl (4.8 kB)
+Collecting pillow
+  Downloading pillow-10.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.4 MB)
+Collecting tabulate
+  Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+Collecting pandas
+  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+Collecting numpy
+  Downloading numpy-1.24.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+Collecting tqdm
+  Downloading tqdm-4.66.1-py3-none-any.whl (78 kB)
+Collecting asyncpg
+  Downloading asyncpg-0.29.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+Collecting types-python-dateutil>=2.8.10
+  Downloading types_python_dateutil-2.8.19.20240106-py3-none-any.whl (9.7 kB)
+Collecting python-dateutil>=2.7.0
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Requirement already satisfied: six>=1.10.0 in /usr/lib/python3/dist-packages (from influxdb) (1.14.0)
+Collecting pytz
+  Downloading pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
+Collecting msgpack
+  Downloading msgpack-1.0.7-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (534 kB)
+Collecting pygments<3.0.0,>=2.13.0
+  Downloading pygments-2.17.2-py3-none-any.whl (1.2 MB)
+Collecting markdown-it-py>=2.2.0
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Collecting typing-extensions<5.0,>=4.0.0; python_version < "3.9"
+  Downloading typing_extensions-4.9.0-py3-none-any.whl (32 kB)
+Collecting SQLAlchemy<3,>=1.4
+  Downloading SQLAlchemy-2.0.25-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+Collecting async-timeout<5.0.0,>=4.0.0; python_version < "3.11"
+  Downloading async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Collecting jsonpatch<2.0,>=1.33
+  Downloading jsonpatch-1.33-py2.py3-none-any.whl (12 kB)
+Collecting langchain-core<0.2,>=0.1.7
+  Downloading langchain_core-0.1.8-py3-none-any.whl (215 kB)
+Collecting pydantic<3,>=1
+  Downloading pydantic-2.5.3-py3-none-any.whl (381 kB)
+Collecting dataclasses-json<0.7,>=0.5.7
+  Downloading dataclasses_json-0.6.3-py3-none-any.whl (28 kB)
+Collecting langchain-community<0.1,>=0.0.9
+  Downloading langchain_community-0.0.10-py3-none-any.whl (1.5 MB)
+Collecting langsmith<0.1.0,>=0.0.77
+  Downloading langsmith-0.0.77-py3-none-any.whl (48 kB)
+Collecting tenacity<9.0.0,>=8.1.0
+  Downloading tenacity-8.2.3-py3-none-any.whl (24 kB)
+Collecting frozenlist>=1.1.1
+  Downloading frozenlist-1.4.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (240 kB)
+Collecting multidict<7.0,>=4.5
+  Downloading multidict-6.0.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (121 kB)
+Collecting yarl<2.0,>=1.0
+  Downloading yarl-1.9.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (308 kB)
+Collecting aiosignal>=1.1.2
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Requirement already satisfied: attrs>=17.3.0 in /usr/lib/python3/dist-packages (from aiohttp) (19.3.0)
+Collecting pyTelegramBotAPI
+  Downloading pyTelegramBotAPI-4.14.1.tar.gz (244 kB)
+Collecting tzdata>=2022.1
+  Downloading tzdata-2023.4-py2.py3-none-any.whl (346 kB)
+Collecting mdurl~=0.1
+  Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting greenlet!=0.4.17; platform_machine == "aarch64" or (platform_machine == "ppc64le" or (platform_machine == "x86_64" or (platform_machine == "amd64" or (platform_machine == "AMD64" or (platform_machine == "win32" or platform_machine == "WIN32")))))
+  Downloading greenlet-3.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (667 kB)
+Requirement already satisfied: jsonpointer>=1.9 in /usr/lib/python3/dist-packages (from jsonpatch<2.0,>=1.33->langchain) (2.0)
+Requirement already satisfied: packaging<24.0,>=23.2 in /usr/local/lib/python3.8/dist-packages (from langchain-core<0.2,>=0.1.7->langchain) (23.2)
+Collecting anyio<5,>=3
+  Downloading anyio-4.2.0-py3-none-any.whl (85 kB)
+Collecting annotated-types>=0.4.0
+  Downloading annotated_types-0.6.0-py3-none-any.whl (12 kB)
+Collecting pydantic-core==2.14.6
+  Downloading pydantic_core-2.14.6-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+Collecting typing-inspect<1,>=0.4.0
+  Downloading typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+Collecting marshmallow<4.0.0,>=3.18.0
+  Downloading marshmallow-3.20.1-py3-none-any.whl (49 kB)
+Requirement already satisfied: idna>=2.0 in /usr/lib/python3/dist-packages (from yarl<2.0,>=1.0->aiohttp) (2.8)
+Collecting sniffio>=1.1
+  Downloading sniffio-1.3.0-py3-none-any.whl (10 kB)
+Collecting exceptiongroup>=1.0.2; python_version < "3.11"
+  Downloading exceptiongroup-1.2.0-py3-none-any.whl (16 kB)
+Collecting mypy-extensions>=0.3.0
+  Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Building wheels for collected packages: docopt, pyTelegramBotAPI
+  Building wheel for docopt (setup.py): started
+  Building wheel for docopt (setup.py): finished with status 'done'
+  Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13704 sha256=e7ed99894d03713a3c1ae594d22319d85f54e1beeef9bd7e41ae51abd7342ed9
+  Stored in directory: /home/runner/.cache/pip/wheels/56/ea/58/ead137b087d9e326852a851351d1debf4ada529b6ac0ec4e8c
+  Building wheel for pyTelegramBotAPI (setup.py): started
+  Building wheel for pyTelegramBotAPI (setup.py): finished with status 'done'
+  Created wheel for pyTelegramBotAPI: filename=pyTelegramBotAPI-4.14.1-py3-none-any.whl size=215640 sha256=e5b46040b767b134aad7e21384d881ec9d182b164c43365bc35fab972a3ed8f7
+  Stored in directory: /home/runner/.cache/pip/wheels/52/c8/a4/446be774251f1d1ee9c5d5238e161f8ab4afb31946960d5638
+Successfully built docopt pyTelegramBotAPI
+Installing collected packages: types-python-dateutil, python-dateutil, arrow, pytz, msgpack, influxdb, docopt, pygments, mdurl, markdown-it-py, typing-extensions, rich, greenlet, SQLAlchemy, async-timeout, numpy, jsonpatch, frozenlist, multidict, yarl, aiosignal, aiohttp, annotated-types, pydantic-core, pydantic, langsmith, sniffio, exceptiongroup, anyio, tenacity, langchain-core, mypy-extensions, typing-inspect, marshmallow, dataclasses-json, langchain-community, langchain, redis, psutil, invoke, python-dotenv, pyTelegramBotAPI, telebot, pillow, tabulate, tzdata, pandas, tqdm, asyncpg
+Successfully installed SQLAlchemy-2.0.25 aiohttp-3.9.1 aiosignal-1.3.1 annotated-types-0.6.0 anyio-4.2.0 arrow-1.3.0 async-timeout-4.0.3 asyncpg-0.29.0 dataclasses-json-0.6.3 docopt-0.6.2 exceptiongroup-1.2.0 frozenlist-1.4.1 greenlet-3.0.3 influxdb-5.3.1 invoke-2.2.0 jsonpatch-1.33 langchain-0.1.0 langchain-community-0.0.10 langchain-core-0.1.8 langsmith-0.0.77 markdown-it-py-3.0.0 marshmallow-3.20.1 mdurl-0.1.2 msgpack-1.0.7 multidict-6.0.4 mypy-extensions-1.0.0 numpy-1.24.4 pandas-2.0.3 pillow-10.2.0 psutil-5.9.7 pyTelegramBotAPI-4.14.1 pydantic-2.5.3 pydantic-core-2.14.6 pygments-2.17.2 python-dateutil-2.8.2 python-dotenv-1.0.0 pytz-2023.3.post1 redis-5.0.1 rich-13.7.0 sniffio-1.3.0 tabulate-0.9.0 telebot-0.0.5 tenacity-8.2.3 tqdm-4.66.1 types-python-dateutil-2.8.19.20240106 typing-extensions-4.9.0 typing-inspect-0.9.0 tzdata-2023.4 yarl-1.9.4

@@ -1,0 +1,30 @@
+# Updated at: 2024-01-08 18:22:04
+snippets:
+  - name: bitstamp-info
+    code: >
+      {
+         "host": "https://www.bitstamp.net",
+         "endpoint": "/api/v2/balance/",
+         "method": "post",
+         "data": {
+         }
+       }
+  - name: bitstamp-trans
+    code: >
+      {
+         "host": "https://www.bitstamp.net",
+         "endpoint": "/api/v2/user_transactions/",
+         "method": "post",
+         "data": {
+         }
+       }
+  - name: bitstamp-order
+    code: >
+      {
+         "host": "https://www.bitstamp.net",
+         "endpoint": "/api/v2/order_status/",
+         "method": "post",
+         "data": {
+            "client_order_id": "f34bd095-d0df-11ec-bb62-2cf05d770af9"
+         }
+       }
