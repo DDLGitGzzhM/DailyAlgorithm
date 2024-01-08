@@ -1,0 +1,10 @@
+# Updated at: 2024-01-08 18:36:21
+snippets:
+  - name: copper-info
+    code: >
+      {
+         "endpoint": "/platform/accounts",
+         "method": "get",
+         "data": {
+         }
+       }

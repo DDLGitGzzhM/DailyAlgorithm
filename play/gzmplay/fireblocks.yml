@@ -1,0 +1,10 @@
+# Updated at: 2024-01-08 18:36:35
+snippets:
+  - name: fireblocks-info
+    code: >
+      {
+         "endpoint": "/v1/vault/accounts",
+         "method": "get",
+         "data": {
+         }
+       }

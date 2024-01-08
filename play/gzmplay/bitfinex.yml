@@ -1,0 +1,50 @@
+# Updated at: 2024-01-08 18:36:30
+snippets:
+  - name: bitfienx-info
+    code: >
+      {
+         "endpoint": "/v2/auth/r/wallets",
+         "method": "post",
+         "data": {
+          }
+      }
+  - name: bitfinex-bill
+    code: >
+      {
+         "endpoint": "/v2/auth/r/ledgers/hist",
+         "method": "post",
+         "data": {
+          }
+      }
+  - name: bitfinex-trans
+    code: >
+      {
+         "endpoint": "/v2/auth/r/trades/hist",
+         "method": "post",
+         "data": {
+          }
+      }
+  - name: bitfinex-order
+    code: >
+      {
+         "endpoint": "/v2/auth/r/orders/hist",
+         "method": "post",
+         "data": {
+          }
+      }
+  - name: bitfinexcm-info
+    code: >
+      {
+         "endpoint": "/v2/auth/r/wallets",
+         "method": "post",
+         "data": {
+          }
+      }
+  - name: bitfinexcm-trans
+    code: >
+      {
+         "endpoint": "/v2/auth/r/trades/hist",
+         "method": "post",
+         "data": {
+          }
+      }

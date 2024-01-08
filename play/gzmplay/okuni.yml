@@ -1,0 +1,90 @@
+# Updated at: 2024-01-08 18:36:32
+snippets:
+  - name: okuni-info
+    code: >
+      {
+         "endpoint": "/api/v5/account/balance",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: okuni-positions
+    code: >
+      {
+        "endpoint": "/api/v5/account/positions",
+        "method": "get",
+        "data": {
+        }
+      }
+  - name: okuniearn-info
+    code: >
+      {
+         "endpoint": "/api/v5/asset/saving-balance",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: okuniwallet-info
+    code: >
+      {
+         "endpoint": "/api/v5/asset/balances",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: okuniearn-staking-defi-orders
+    code: >
+      {
+        "endpoint": "/api/v5/finance/staking-defi/orders-active",
+        "method": "get",
+        "data": {
+        }
+      }
+  - name: okuni-info
+    code: >
+      {
+         "endpoint": "/api/v5/account/balance",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: okuni-positions
+    code: >
+      {
+         "endpoint": "/api/v5/account/positions",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: okuni-bill
+    code: >
+      {
+         "endpoint": "/api/v5/account/bills-archive",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: okuniearn-info
+    code: >
+      {
+         "endpoint": "/api/v5/asset/saving-balance",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: okuniwallet-info
+    code: >
+      {
+         "endpoint": "/api/v5/asset/balances",
+         "method": "get",
+         "data": {
+         }
+      }
+  - name: okwallet-bill
+    code: >
+      {
+         "endpoint": "/api/v5/asset/bills",
+         "method": "get",
+         "data": {
+         }
+      }

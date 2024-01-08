@@ -1,0 +1,11 @@
+# Updated at: 2024-01-08 18:36:33
+snippets:
+  - name: coinbase-info
+    code: >
+      {
+         "host": "coinbase",
+         "endpoint": "/accounts",
+         "method": "get",
+         "data": {
+         }
+       }
