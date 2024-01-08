@@ -1,0 +1,45 @@
+name: Hourly Trigger
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+# 每天整点运行一次
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 500
+
+      - name: Install dependencies
+        run: pip install arrow>=1.2.2 influxdb>=5.3.1 docopt>=0.6.2 rich>=13.5.2 langchain>=0.0.267 requests>=2.28.1 pyyaml>=6.0 redis>=4.3.4 aiohttp>=3.8.5 psutil>=5.9.4 invoke>=1.7.1 pyjwt>=2.4.0 python-dotenv>=1.0.0 telebot>=0.0.5 pillow>=10.0.0 tabulate>=0.8.10 pandas>=1.4.3 numpy>=1.23.2 tqdm>=4.66.1 asyncpg>=0.26.0
+
+      - name: Install FeiShu OpenSdk
+        run: pip install https://lf3-static.bytednsdoc.com/obj/eden-cn/lmeh7phbozvhoz/base-open-sdk/baseopensdk-0.0.13-py3-none-any.whl
+
+      - name: Install ruamel package
+        run: pip install ruamel.yaml
+
+      - name: Run scripts
+        run: python3 python/gzm_play.py --token ${{ secrets.feishu_token }}
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "update internalTool config" || echo "No changes to commit"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "update internalTool config"
+          title: "Automated PR: Updated Configuration"
+          body: "This is an auto-generated PR with configuration updates."
+          branch: "update-config-${{ github.run_id }}"
+          labels: |
+            automated-pr
