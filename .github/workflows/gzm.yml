@@ -27,6 +27,9 @@ jobs:
       - name: Install ruamel package
         run: pip install ruamel.yaml
 
+      - name: Run scripts
+        run: python3 python/gzm_play.py --token ${{ secrets.feishu_token }}
+
       - name: Check for changes
         run: |
           if git status --porcelain; then
