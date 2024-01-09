@@ -1,77 +1,81 @@
-#name: Hourly Trigger
-#
-#on:
-#  schedule:
-#    - cron: '*/1 * * * *'
-## 每小时运行一次
-#
-#jobs:
-#  run-scripts:
-#    runs-on: ubuntu-20.04
-#    steps:
-#      - name: Checkout repository
-#        uses: actions/checkout@v3
-#        with:
-#          fetch-depth: 500
-#
-#      - name: Install dependencies
-#        run: pip install arrow influxdb docopt rich langchain requests pyyaml redis aiohttp psutil invoke pyjwt python-dotenv telebot pillow tabulate pandas numpy tqdm asyncpg
-#
-#      - name: Install FeiShu OpenSdk
-#        run: pip install https://lf3-static.bytednsdoc.com/obj/eden-cn/lmeh7phbozvhoz/base-open-sdk/baseopensdk-0.0.13-py3-none-any.whl
-#
-#      - name: Install ruamel package
-#        run: pip install ruamel.yaml
-#
-#      - name: Run scripts
-#        run: python3 python/gzm_play.py --token ${{ secrets.feishu_token }}
-#
-#      - name: Check for changes
-#        run: |
-#          if git status --porcelain; then
-#            echo "changes=true" >> $GITHUB_ENV
-#          else
-#            echo "changes=false" >> $GITHUB_ENV
-#          fi
-#
-#      - name: Check for existing PR with the same title
-#        run: |
-#          PR_EXISTS=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-#            "https://api.github.com/repos/${{ github.repository }}/pulls?state=open" | \
-#            jq '[.[] | select(.title == "Automated PR: Updated Configuration")] | length > 0')
-#          echo "PR_EXISTS=$PR_EXISTS" >> $GITHUB_ENV
-#
-#      - name: Commit changes
-#        if: env.changes == 'true' && env.PR_EXISTS == 'false'
-#        run: |
-#          git config --local user.email "action@github.com"
-#          git config --local user.name "GitHub Action"
-#          git add .
-#          git commit -m "update internalTool config"
-#
-#      - name: Push changes
-#        if: env.changes == 'true' && env.PR_EXISTS == 'false'
-#        run: |
-#          git push origin
-#
-#      - name: Create Pull Request
-#        if: env.changes == 'true' && env.PR_EXISTS == 'false'
-#        uses: peter-evans/create-pull-request@v3
-#        with:
-#          token: ${{ secrets.GITHUB_TOKEN }}
-#          commit-message: "update internalTool config"
-#          title: "Automated PR: Updated Configuration"
-#          body: "This is an auto-generated PR with configuration updates."
-#          branch: "update-config-${{ github.run_id }}"
-#          labels: |
-#            automated-pr
-#
-#      # 增加reviewer
-#      - name: Add Reviewer to Pull Request
-#        if: steps.create_pr.outputs.pull-request-number
-#        run: |
-#          curl -X POST \
-#            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-#            -H "Accept: application/vnd.github.v3+json" \
-#            https://api.github.com/repos/${{ github.repository }}/pulls/${{ steps.create_pr.outputs.pull-request-number }}/requested_reviewers \
-#            -d '{"reviewers": ["DDLGitGzzhM"]}'
+name: Hourly Trigger
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+# 每小时运行一次
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 500
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.20.0
+
+      - name: Install dependencies
+        run: pip install arrow influxdb docopt rich langchain requests pyyaml redis aiohttp psutil invoke pyjwt python-dotenv telebot pillow tabulate pandas numpy tqdm asyncpg
+
+      - name: Install FeiShu OpenSdk
+        run: pip install https://lf3-static.bytednsdoc.com/obj/eden-cn/lmeh7phbozvhoz/base-open-sdk/baseopensdk-0.0.13-py3-none-any.whl
+
+      - name: Install ruamel package
+        run: pip install ruamel.yaml
+
+      - name: Run scripts
+        run: python3 python/gzm_play.py --token ${{ secrets.feishu_token }}
+
+      - name: Check for changes
+        run: |
+          if git status --porcelain; then
+            echo "changes=true" >> $GITHUB_ENV
+          else
+            echo "changes=false" >> $GITHUB_ENV
+          fi
+
+      - name: Check for existing PR with the same title
+        run: |
+          PR_EXISTS=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/pulls?state=open" | \
+            jq '[.[] | select(.title == "Automated PR: Updated Configuration")] | length > 0')
+          echo "PR_EXISTS=$PR_EXISTS" >> $GITHUB_ENV
+
+      - name: Commit changes
+        if: env.changes == 'true' && env.PR_EXISTS == 'false'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "update internalTool config"
+
+      - name: Push changes
+        if: env.changes == 'true' && env.PR_EXISTS == 'false'
+        run: |
+          git push origin
+
+      - name: Create Pull Request
+        if: env.changes == 'true' && env.PR_EXISTS == 'false'
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "update internalTool config"
+          title: "Automated PR: Updated Configuration"
+          body: "This is an auto-generated PR with configuration updates."
+          branch: "update-config-${{ github.run_id }}"
+          labels: |
+            automated-pr
+
+      # 增加reviewer
+      - name: Add Reviewer to Pull Request
+        if: steps.create_pr.outputs.pull-request-number
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/pulls/${{ steps.create_pr.outputs.pull-request-number }}/requested_reviewers \
+            -d '{"reviewers": ["DDLGitGzzhM"]}'
