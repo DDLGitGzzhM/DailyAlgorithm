@@ -32,6 +32,7 @@ jobs:
             echo "changes=true" >> $GITHUB_ENV
           else
             echo "changes=false" >> $GITHUB_ENV
+          fi
 
       - name: Check for existing PR with the same title
         run: |
