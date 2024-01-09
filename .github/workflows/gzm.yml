@@ -53,10 +53,10 @@ jobs:
           git add .
           git commit -m "update internalTool config"
 
-      - name: Push changes
-        if: env.changes == 'true' && env.PR_EXISTS == 'false'
-        run: |
-          git push origin
+#      - name: Push changes
+#        if: env.changes == 'true' && env.PR_EXISTS == 'false'
+#        run: |
+#          git push origin
 
       - name: Create Pull Request
         if: env.changes == 'true' && env.PR_EXISTS == 'false'
@@ -71,12 +71,12 @@ jobs:
           labels: |
             automated-pr
 
-#      # 增加reviewer
-#      - name: Add Reviewer to Pull Request
-#        if: steps.create_pr.outputs.pull-request-number
-#        run: |
-#          curl -X POST \
-#            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-#            -H "Accept: application/vnd.github.v3+json" \
-#            https://api.github.com/repos/${{ github.repository }}/pulls/${{ steps.create_pr.outputs.pull-request-number }}/requested_reviewers \
-#            -d '{"reviewers": ["DDLGitGzzhM"]}'
+      # 增加reviewer
+      - name: Add Reviewer to Pull Request
+        if: steps.create_pr.outputs.pull-request-number
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/pulls/${{ steps.create_pr.outputs.pull-request-number }}/requested_reviewers \
+            -d '{"reviewers": ["DDLGitGzzhM"]}'
