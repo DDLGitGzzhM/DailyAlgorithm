@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1fa911-5e6c-469c-b94c-a1694f6285a9" name="Changes" comment="invoke">
+    <list default="true" id="4d1fa911-5e6c-469c-b94c-a1694f6285a9" name="Changes" comment="add reviewer">
       <change beforePath="$PROJECT_DIR$/.github/workflows/gzm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gzm.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -98,7 +98,8 @@
     <MESSAGE value="for test" />
     <MESSAGE value="fix for add pr" />
     <MESSAGE value="invoke" />
-    <option name="LAST_COMMIT_MESSAGE" value="invoke" />
+    <MESSAGE value="add reviewer" />
+    <option name="LAST_COMMIT_MESSAGE" value="add reviewer" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
