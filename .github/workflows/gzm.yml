@@ -2,8 +2,7 @@ name: Hourly Trigger
 
 on:
   schedule:
-    - cron: '*/1 * * * *'
-# 每小时运行一次
+    - cron: '*/1 * * * *' # 每小时运行一次
 
 jobs:
   run-scripts:
@@ -27,9 +26,6 @@ jobs:
 
       - name: Install ruamel package
         run: pip install ruamel.yaml
-
-      - name: Run scripts
-        run: python3 python/gzm_play.py --token ${{ secrets.feishu_token }}
 
       - name: Check for changes
         run: |
@@ -61,6 +57,7 @@ jobs:
 
       - name: Create Pull Request
         if: env.changes == 'true' && env.PR_EXISTS == 'false'
+        id: create_pr
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
