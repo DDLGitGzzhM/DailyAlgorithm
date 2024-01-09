@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1fa911-5e6c-469c-b94c-a1694f6285a9" name="Changes" comment="del">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/gzm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gzm.yml" afterDir="false" />
-    </list>
+    <list default="true" id="4d1fa911-5e6c-469c-b94c-a1694f6285a9" name="Changes" comment="open for node" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +98,8 @@
     <MESSAGE value="add reviewer" />
     <MESSAGE value="fix fix fix" />
     <MESSAGE value="del" />
-    <option name="LAST_COMMIT_MESSAGE" value="del" />
+    <MESSAGE value="open for node" />
+    <option name="LAST_COMMIT_MESSAGE" value="open for node" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
