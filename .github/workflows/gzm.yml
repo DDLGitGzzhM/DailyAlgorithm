@@ -50,10 +50,10 @@ jobs:
           git add .
           git commit -m "update internalTool config"
 
-#      - name: Push changes
-#        if: env.changes == 'true' && env.PR_EXISTS == 'false'
-#        run: |
-#          git push origin
+      - name: Push changes
+        if: env.changes == 'true' && env.PR_EXISTS == 'false'
+        run: |
+          git push origin
 
       - name: Create Pull Request
         if: env.changes == 'true' && env.PR_EXISTS == 'false'
