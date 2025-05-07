@@ -1,9 +1,0 @@
-snippets:
-  - name: coinbase-info
-    code: >
-      {
-         "endpoint": "/v2/accounts",
-         "method": "get",
-         "data": {
-         }
-       }

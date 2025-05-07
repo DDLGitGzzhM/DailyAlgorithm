@@ -1,9 +1,0 @@
-snippets:
-  - name: fireblocks-info
-    code: >
-      {
-         "endpoint": "/v1/vault/accounts",
-         "method": "get",
-         "data": {
-         }
-       }
