@@ -1,54 +1,31 @@
 #include <bits/stdc++.h>
 #define LL long long
 using namespace std;
-
-typedef pair<int,int> PII ;
-const int N = 3e5 + 10 ;
-int n , m ;
-int a[N],s[N];
-
-vector<int> alls ;
-vector<PII> add,query ;
+const int N = 1e5+10;
  
-int find(int x) {
-    int l = 0 , r = alls.size() - 1;
-    while(l < r) {
-    int mid = (l + r) >> 1;
-        if(alls[mid] >= x) r = mid ;
-        else l = mid + 1;
-    }
-    return r + 1 ;
+int head, e[N], ne[N], idx ;
+
+void init() {
+    head = -1;
+    idx = 0;
+}
+// 插入顺序是 1，2，3 但是遍历顺序是 3 ，2，1
+void add_to_head(int x) {
+    e[idx] = x ; 
+    ne[idx] = head ; 
+    head = idx ++ ;
 }
 
-int main() {
-    cin>>n>>m;
-    for(int  i = 1; i <= n ; i ++ ) {
-        int x,c; cin >>x>>c;
-        add.push_back({x,c});
-        alls.push_back(x);
-    }
-    
-    for(int i = 1 ; i <= m ; i ++ ) {
-        int l,r;cin>>l>>r;
-        query.push_back({l,r});
-        alls.push_back({l});
-        alls.push_back({r});
-    }
+void add(int k,int x) {
+    e[idx] = x;
+    ne[idx] = ne[k];
+    ne[k] = idx ++ ;
+}
 
-    sort(alls.begin(), alls.end());
-    alls.erase(unique(alls.begin(), alls.end()), alls.end());
-    
-    for(auto item : add) {
-        int x = find(item.first);
-        a[x] += item.second;
-    }
-    
-    for (int i = 1; i <= alls.size(); i ++ )  s[i] = s[i-1] + a[i];
-    
-    for(auto item : query) {
-        int l = find(item.first) ;
-        int r = find(item.second) ;
-        cout<<s[r] - s[l-1]<<endl;
-    }
+
+
+int main() {
+    int n;cin>>n;
+  
     return 0;
 }
