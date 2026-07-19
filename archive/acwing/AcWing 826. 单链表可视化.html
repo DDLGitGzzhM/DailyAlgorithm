@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AcWing 826 · 单链表数组模拟</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #1a2332;
+      --border: #2d3a4f;
+      --text: #e7ecf3;
+      --muted: #8b9bb4;
+      --accent: #3d9cf0;
+      --head: #f0a030;
+      --new: #4ec9b0;
+      --del: #e06c75;
+      --null: #5c6b82;
+      --cell: #243044;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "SF Mono", "Menlo", "Consolas", monospace;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 24px;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 20px;
+      max-width: 1100px;
+    }
+    @media (max-width: 800px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .panel h2 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 0 0 12px;
+      font-weight: 600;
+    }
+    .ops { display: flex; flex-direction: column; gap: 14px; }
+    .op {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .op:last-child { border-bottom: none; padding-bottom: 0; }
+    .op label {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    input[type="number"] {
+      width: 72px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 10px;
+      border-radius: 6px;
+      font: inherit;
+    }
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font: inherit;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover { filter: brightness(1.1); }
+    button.danger { background: var(--del); }
+    button.ghost {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .vars {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .var {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      min-width: 100px;
+    }
+    .var .name { color: var(--muted); font-size: 0.75rem; }
+    .var .val {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--head);
+    }
+    .var .val.null { color: var(--null); }
+    .chain {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px;
+      min-height: 64px;
+      margin-bottom: 20px;
+      padding: 12px;
+      background: var(--bg);
+      border-radius: 8px;
+      border: 1px dashed var(--border);
+    }
+    .node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--cell);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      min-width: 64px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .node.head-node {
+      border-color: var(--head);
+      box-shadow: 0 0 0 2px rgba(240, 160, 48, 0.25);
+    }
+    .node.flash {
+      border-color: var(--new);
+      box-shadow: 0 0 0 2px rgba(78, 201, 176, 0.35);
+    }
+    .node .idx { font-size: 0.7rem; color: var(--muted); }
+    .node .val { font-size: 1.2rem; font-weight: 700; }
+    .arrow {
+      color: var(--muted);
+      font-size: 1.2rem;
+      padding: 0 2px;
+    }
+    .null-mark {
+      color: var(--null);
+      font-size: 0.9rem;
+      padding: 0 6px;
+    }
+    .tables { display: grid; gap: 16px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: var(--bg);
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+    td.hl { background: rgba(78, 201, 176, 0.15); color: var(--new); }
+    td.head-cell { background: rgba(240, 160, 48, 0.15); color: var(--head); }
+    .log {
+      margin-top: 16px;
+      max-height: 160px;
+      overflow-y: auto;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .log div { padding: 3px 0; border-bottom: 1px solid transparent; }
+    .log .step { color: var(--new); }
+    .hint {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>AcWing 826 · 单链表数组模拟</h1>
+  <p class="sub">左侧操作 → 右侧实时看 head / e[] / ne[] / idx，以及逻辑链表怎么串</p>
+
+  <div class="layout">
+    <aside class="panel ops">
+      <h2>操作</h2>
+
+      <div class="op">
+        <label>H x — 插到头部</label>
+        <div class="row">
+          <input type="number" id="hx" value="1" />
+          <button onclick="doH()">执行 H</button>
+        </div>
+        <div class="hint">新节点 next = 旧 head，再把 head 换成新节点</div>
+      </div>
+
+      <div class="op">
+        <label>I k x — 在第 k 次插入的节点后面插</label>
+        <div class="row">
+          <span style="color:var(--muted)">k</span>
+          <input type="number" id="ik" value="1" min="1" />
+          <span style="color:var(--muted)">x</span>
+          <input type="number" id="ix" value="3" />
+          <button onclick="doI()">执行 I</button>
+        </div>
+        <div class="hint">k 是插入次序（下标 k-1），不是当前链表第几个</div>
+      </div>
+
+      <div class="op">
+        <label>D k — 删除</label>
+        <div class="row">
+          <input type="number" id="dk" value="0" min="0" />
+          <button class="danger" onclick="doD()">执行 D</button>
+        </div>
+        <div class="hint">k=0 删头；k&gt;0 删「第 k 次插入节点」的下一个</div>
+      </div>
+
+      <div class="op">
+        <div class="row">
+          <button class="ghost" onclick="reset()">重置</button>
+          <button class="ghost" onclick="demo()">演示一遍</button>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <div class="panel" style="margin-bottom:16px">
+        <h2>当前变量</h2>
+        <div class="vars">
+          <div class="var">
+            <div class="name">head</div>
+            <div class="val" id="v-head">-1</div>
+          </div>
+          <div class="var">
+            <div class="name">idx（下一个可用下标）</div>
+            <div class="val" id="v-idx">0</div>
+          </div>
+        </div>
+
+        <h2>逻辑链表（从 head 出发）</h2>
+        <div class="chain" id="chain"></div>
+
+        <h2>数组仓库</h2>
+        <div class="tables" id="tables"></div>
+
+        <h2>操作日志</h2>
+        <div class="log" id="log"></div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const N = 12;
+    let head, e, ne, idx, lastFlash;
+
+    function init() {
+      head = -1;
+      e = Array(N).fill(null);
+      ne = Array(N).fill(null);
+      idx = 0;
+      lastFlash = -1;
+      document.getElementById("log").innerHTML = "";
+      log("init：head = -1（空链表），idx = 0");
+      render();
+    }
+
+    function log(msg, isStep) {
+      const el = document.getElementById("log");
+      const div = document.createElement("div");
+      if (isStep) div.className = "step";
+      div.textContent = msg;
+      el.prepend(div);
+    }
+
+    function addToHead(x) {
+      if (idx >= N) { alert("演示数组已满，请重置"); return; }
+      const i = idx;
+      e[i] = x;
+      ne[i] = head;
+      log(`H ${x}：e[${i}]=${x}，ne[${i}]=${head}（旧 head），head 从 ${head} → ${i}`, true);
+      head = i;
+      idx++;
+      lastFlash = i;
+      render();
+    }
+
+    function add(k, x) {
+      if (idx >= N) { alert("演示数组已满，请重置"); return; }
+      if (k < 0 || k >= idx || e[k] === null) {
+        alert(`节点 ${k} 还不存在（k 是第几次插入，从 1 起）`);
+        return;
+      }
+      const i = idx;
+      e[i] = x;
+      ne[i] = ne[k];
+      log(`I ${k + 1} ${x}：在下标 ${k} 后插 → e[${i}]=${x}，ne[${i}]=ne[${k}]=${ne[k]}，再 ne[${k}]=${i}`, true);
+      ne[k] = i;
+      idx++;
+      lastFlash = i;
+      render();
+    }
+
+    function remove(k) {
+      if (k === -1) {
+        if (head === -1) { alert("链表已空"); return; }
+        log(`D 0：删头，head 从 ${head} → ${ne[head]}`, true);
+        head = ne[head];
+        lastFlash = head;
+        render();
+        return;
+      }
+      if (k < 0 || k >= idx || e[k] === null) {
+        alert(`节点 ${k} 还不存在`);
+        return;
+      }
+      if (ne[k] === -1 || ne[k] === null) {
+        alert(`下标 ${k} 后面没有节点可删`);
+        return;
+      }
+      const del = ne[k];
+      log(`D ${k + 1}：ne[${k}] 从 ${del} → ${ne[del]}（跳过下标 ${del}）`, true);
+      ne[k] = ne[del];
+      lastFlash = k;
+      render();
+    }
+
+    function doH() {
+      addToHead(Number(document.getElementById("hx").value));
+    }
+    function doI() {
+      const k = Number(document.getElementById("ik").value);
+      const x = Number(document.getElementById("ix").value);
+      add(k - 1, x);
+    }
+    function doD() {
+      const k = Number(document.getElementById("dk").value);
+      remove(k === 0 ? -1 : k - 1);
+    }
+    function reset() { init(); }
+
+    async function demo() {
+      init();
+      const steps = [
+        () => addToHead(1),
+        () => addToHead(2),
+        () => add(0, 3),
+        () => addToHead(4),
+        () => remove(-1),
+      ];
+      for (const fn of steps) {
+        await new Promise((r) => setTimeout(r, 900));
+        fn();
+      }
+    }
+
+    function render() {
+      const headEl = document.getElementById("v-head");
+      headEl.textContent = head;
+      headEl.className = "val" + (head === -1 ? " null" : "");
+      document.getElementById("v-idx").textContent = idx;
+
+      // chain
+      const chain = document.getElementById("chain");
+      chain.innerHTML = "";
+      if (head === -1) {
+        chain.innerHTML = '<span class="null-mark">空链表（head = -1）</span>';
+      } else {
+        const start = document.createElement("span");
+        start.className = "null-mark";
+        start.textContent = "head → ";
+        start.style.color = "var(--head)";
+        chain.appendChild(start);
+
+        let cur = head;
+        const seen = new Set();
+        while (cur !== -1 && cur !== null && !seen.has(cur)) {
+          seen.add(cur);
+          const node = document.createElement("div");
+          node.className = "node" + (cur === head ? " head-node" : "") + (cur === lastFlash ? " flash" : "");
+          node.innerHTML = `<span class="idx">下标 ${cur}</span><span class="val">${e[cur]}</span>`;
+          chain.appendChild(node);
+          const ar = document.createElement("span");
+          ar.className = "arrow";
+          ar.textContent = "→";
+          chain.appendChild(ar);
+          cur = ne[cur];
+        }
+        const end = document.createElement("span");
+        end.className = "null-mark";
+        end.textContent = "-1";
+        chain.appendChild(end);
+      }
+
+      // tables: show used slots + a few empty
+      const show = Math.max(idx + 1, 4);
+      const cols = Math.min(show, N);
+      let html = "<table><tr><th></th>";
+      for (let i = 0; i < cols; i++) html += `<th>${i}</th>`;
+      html += "</tr><tr><th>e[i] 值</th>";
+      for (let i = 0; i < cols; i++) {
+        const cls = i === lastFlash ? "hl" : i === head ? "head-cell" : "";
+        const v = e[i] === null ? "—" : e[i];
+        html += `<td class="${cls}">${v}</td>`;
+      }
+      html += "</tr><tr><th>ne[i] 下一个</th>";
+      for (let i = 0; i < cols; i++) {
+        const cls = i === lastFlash ? "hl" : i === head ? "head-cell" : "";
+        const v = ne[i] === null ? "—" : ne[i];
+        html += `<td class="${cls}">${v}</td>`;
+      }
+      html += "</tr></table>";
+      html += '<p class="hint" style="margin-top:8px">橙色 = 当前 head；青绿高亮 = 刚改动的格子。未分配显示 —</p>';
+      document.getElementById("tables").innerHTML = html;
+    }
+
+    init();
+  </script>
+</body>
+</html>
